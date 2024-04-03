@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   post 'auth/login', to: 'authentication#login'
+  resources :charging_sessions, only: [:create, :update]
 
 end
